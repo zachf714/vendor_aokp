@@ -4,22 +4,23 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 
 # Common dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
+#Actually we only want the EN dict so we can fit on out system
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries/packages/inputmethods/LatinIME/java/raw/main_en.dict
 
 PRODUCT_PACKAGES += \
     BluetoothExt \
     CellBroadcastReceiver \
     libemoji \
     LatinImeDictionaryPack \
-    mGerrit \
-    Microbes \
     ROMControl \
     Stk \
     su \
-    SwagPapers \
     Torch \
-    UnicornPorn \
     KitKatWhite
+#    mGerrit \
+#    Microbes \
+#    SwagPapers \
+#    UnicornPorn \
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
