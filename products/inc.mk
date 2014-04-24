@@ -17,5 +17,8 @@ PRODUCT_DEVICE := inc
 PRODUCT_MODEL := Droid Incredible
 PRODUCT_MANUFACTURER := HTC
 
+# inc's ADB is very bad to say the least, so set adb to insecure so it is easier to use
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=inc BUILD_FINGERPRINT="verizon_wwe/inc/inc/inc:2.3.4/GRJ22/185897.2:user/release-keys" 
 PRIVATE_BUILD_DESC="inc-user 4.4.2 KVT49L e9b6b7e1a7 release-keys"
