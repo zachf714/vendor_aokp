@@ -7,6 +7,9 @@ $(call inherit-product, vendor/aokp/configs/cdma.mk)
 # Inherit common product files.
 $(call inherit-product, vendor/aokp/configs/common.mk)
 
+PRODUCT_COPY_FILES +=  \
+    vendor/aokp/prebuilt/bootanimation/bootanimation_480.zip:system/media/bootanimation.zip
+
 # Setup device specific product configuration.
 PRODUCT_NAME := aokp_inc
 PRODUCT_BRAND := HTC
